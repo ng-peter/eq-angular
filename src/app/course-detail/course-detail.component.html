@@ -6,8 +6,7 @@
     Instructor name: {{ course1?.instructor ? course1?.instructor : "TBA" }}
   </div>
   <div *ngIf="course1?.instructor; else elseBlock">
-    Instructor name:
-    {{ course1?.instructor }}
+    Instructor name: {{ course1?.instructor }}
   </div>
   <ng-template #elseBlock>Instructor to be determined</ng-template>
   <div>
@@ -18,16 +17,12 @@
       <span *ngSwitchDefault>Normal Amount</span>
     </span>
     Total hours: {{ course1?.hours }}
-    <span *ngIf="course1?.hours">
-      Total minutes:
-      {{ course1.hours * 60 }}</span
-    >
+    <span *ngIf="course1?.hours"> Total minutes: {{ course1.hours * 60 }}</span>
   </div>
   <div *ngIf="course1?.movie">
     Favorite Movie: {{ course1.movie["favorite movie"] }}
     <img [src]="course1.movie.image" />
   </div>
-  <a [routerLink]="['../courses/' + course1.id]">More details</a>
   <button (click)="handleClick()">Click me!</button>
   <div class="cal" [id]="'course' + course1?.id"></div>
 </div>
