@@ -24,7 +24,7 @@ export class CourseItemComponent implements AfterContentChecked {
   constructor(private toastr: ToastrService, private fcal: FcalService) {}
 
   ngAfterContentChecked() {
-    //this.calendar = this.fcal.fullCalendar("course" + this.course1.id);
+    this.calendar = this.fcal.fullCalendar("course" + this.course1.id);
   }
 
   fontSizeSet() {
