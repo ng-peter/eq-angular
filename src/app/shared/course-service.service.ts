@@ -13,4 +13,8 @@ export class CourseService {
   getCourses() {
     return this.courses;
   }
+
+  getCourse(id: number) {
+    return this.courses.find(course => course.id === id);
+  }
 }

@@ -1,0 +1,30 @@
+<div class="navbar navbar-expand-lg">
+  <ul class="navbar-nav">
+    <li class="navbar-item">
+      <a
+        class="nav-link"
+        [routerLink]="['']"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Home</a
+      >
+    </li>
+    <li class="navbar-item">
+      <a
+        class="nav-link"
+        [routerLink]="['courses']"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Courses</a
+      >
+    </li>
+    <li class="navbar-item">
+      <a
+        class="nav-link"
+        [routerLink]="['courses/add']"
+        routerLinkActive="active"
+        >Create</a
+      >
+    </li>
+  </ul>
+</div>

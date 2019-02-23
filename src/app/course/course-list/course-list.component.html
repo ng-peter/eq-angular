@@ -1,6 +1,7 @@
-<div class="course-list">
+<div class="course-list row">
   <!-- <course-item [course1]="course1"></course-item> -->
   <course-item
+    class="col-lg-6"
     *ngFor="let course of courses"
     [course1]="course"
     (courseName)="parentHandler($event)"
