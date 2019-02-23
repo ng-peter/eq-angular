@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
   constructor(private fcal: FcalService) {}
 
   ngOnInit() {
-    this.calendar = this.fcal.fullCalendar("mainCal");
+    //this.calendar = this.fcal.fullCalendar("mainCal");
   }
 
   title = "app";
