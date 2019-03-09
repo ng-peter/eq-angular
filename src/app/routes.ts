@@ -4,9 +4,14 @@ import { CourseDetailComponent } from "./course-detail/course-detail.component";
 import { NotFoundComponent } from "./not-found/not-found.component";
 import { CourseRouteActivatorService } from "./shared/course-route-activator.service";
 import { AddCourseComponent } from "./add-course/add-course.component";
+import { CourseResolverService } from "./shared/course-resolver.service";
 
 export const appRoutes: Routes = [
-  { path: "courses", component: CourseComponent },
+  {
+    path: "courses",
+    component: CourseComponent,
+    resolve: { courses: CourseResolverService }
+  },
   { path: "courses/add", component: AddCourseComponent },
   {
     path: "courses/:id",
