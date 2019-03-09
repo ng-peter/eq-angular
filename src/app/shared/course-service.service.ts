@@ -16,7 +16,8 @@ export class CourseService {
     setTimeout(() => {
       subject.next(this.courses);
       subject.complete();
-    }, 2000);
+    }, 500);
+    //return this.courses;
     return subject;
   }
 

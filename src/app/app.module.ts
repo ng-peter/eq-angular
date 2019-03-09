@@ -18,6 +18,7 @@ import { CourseDetailComponent } from "./course-detail/course-detail.component";
 import { NotFoundComponent } from "./not-found/not-found.component";
 import { AddCourseComponent } from "./add-course/add-course.component";
 import { CourseResolverService } from "./shared/course-resolver.service";
+import { AuthService } from "./user/auth.service";
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { CourseResolverService } from "./shared/course-resolver.service";
     DataService,
     ToastrService,
     FcalService,
-    CourseResolverService
+    CourseResolverService,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })
