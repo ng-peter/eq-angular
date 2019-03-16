@@ -14,9 +14,11 @@ import { DataService } from "./shared/data-service.service";
 import { ToastrService } from "./shared/toastr.service";
 import { FcalService } from "./shared/fcal.service";
 import { NavbarComponent } from "./navbar/navbar.component";
-import { CourseDetailComponent } from './course-detail/course-detail.component';
-import { NotFoundComponent } from './not-found/not-found.component';
-import { AddCourseComponent } from './add-course/add-course.component';
+import { CourseDetailComponent } from "./course-detail/course-detail.component";
+import { NotFoundComponent } from "./not-found/not-found.component";
+import { AddCourseComponent } from "./add-course/add-course.component";
+import { CourseResolverService } from "./shared/course-resolver.service";
+import { AuthService } from "./user/auth.service";
 
 @NgModule({
   declarations: [
@@ -31,7 +33,14 @@ import { AddCourseComponent } from './add-course/add-course.component';
     AddCourseComponent
   ],
   imports: [BrowserModule, RouterModule.forRoot(appRoutes)],
-  providers: [CourseService, DataService, ToastrService, FcalService],
+  providers: [
+    CourseService,
+    DataService,
+    ToastrService,
+    FcalService,
+    CourseResolverService,
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

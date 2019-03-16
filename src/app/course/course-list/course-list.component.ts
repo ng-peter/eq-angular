@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { CourseService } from "../../shared/course-service.service";
+import { ActivatedRoute } from "../../../../node_modules/@angular/router";
 
 @Component({
   selector: "course-list",
@@ -9,10 +10,16 @@ import { CourseService } from "../../shared/course-service.service";
 export class CourseListComponent implements OnInit {
   courses;
 
-  constructor(private courseServce: CourseService) {}
+  constructor(
+    private courseServce: CourseService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit() {
-    this.courses = this.courseServce.getCourses();
+    /* this.courses = this.courseServce.getCourses().subscribe(courses => {
+      this.courses = courses;
+    }); */
+    this.courses = this.route.snapshot.data["courses"];
   }
 
   parentHandler(name) {
