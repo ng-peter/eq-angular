@@ -1,35 +1,49 @@
-<div class="navbar navbar-expand-lg">
-  <ul class="navbar-nav">
-    <li class="navbar-item">
-      <a
-        class="nav-link"
-        [routerLink]="['']"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true }"
-        >Home</a
-      >
-    </li>
-    <li class="navbar-item">
-      <a
-        class="nav-link"
-        [routerLink]="['courses']"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true }"
-        >Courses</a
-      >
-    </li>
-    <li class="navbar-item">
-      <a
-        class="nav-link"
-        [routerLink]="['courses/add']"
-        routerLinkActive="active"
-        >Create</a
-      >
-    </li>
-    <li class="navbar-item">
-      <a class="nav-link" [routerLink]="['user']" routerLinkActive="active"
-        >User</a
-      >
-    </li>
-  </ul>
+<div class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="navbar-brand">
+    <a class="navbar-brand">
+      <h1>LOGO</h1>
+    </a>
+  </div>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="nav navbar-nav mr-auto">
+      <li class="nav-item">
+        <a
+          [routerLink]="['/courses']"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="nav-link"
+          >All Classes</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          [routerLink]="['/courses/add']"
+          routerLinkActive="active"
+          class="nav-link"
+          >Add Class</a
+        >
+      </li>
+    </ul>
+    <div class="navbar-header navbar-right">
+      <ul class="nav navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['user']" routerLinkActive="active"
+            >User</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
