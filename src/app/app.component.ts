@@ -7,6 +7,8 @@ import { FcalService } from "./shared/fcal.service";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent implements OnInit {
+  currentDate = new Date();
+
   calendar;
   constructor(private fcal: FcalService) {}
 

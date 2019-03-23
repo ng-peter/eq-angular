@@ -19,6 +19,9 @@ import { NotFoundComponent } from "./not-found/not-found.component";
 import { AddCourseComponent } from "./add-course/add-course.component";
 import { CourseResolverService } from "./shared/course-resolver.service";
 import { AuthService } from "./user/auth.service";
+import { CollapsibleWellComponent } from './shared/collapsible-well/collapsible-well.component';
+import { AddHoursPipe } from './shared/add-hours.pipe';
+import { ShowMinutesPipe } from './shared/show-minutes.pipe';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { AuthService } from "./user/auth.service";
     NavbarComponent,
     CourseDetailComponent,
     NotFoundComponent,
-    AddCourseComponent
+    AddCourseComponent,
+    CollapsibleWellComponent,
+    AddHoursPipe,
+    ShowMinutesPipe
   ],
   imports: [BrowserModule, RouterModule.forRoot(appRoutes)],
   providers: [
