@@ -7,7 +7,6 @@ import {
   Validators,
   ValidatorFn
 } from "@angular/forms";
-import { S_IFREG } from "constants";
 
 @Component({
   selector: "app-profile",
