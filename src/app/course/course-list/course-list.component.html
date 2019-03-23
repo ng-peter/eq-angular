@@ -1,14 +1,74 @@
-<h1>COURSE LIST</h1>
+<div class="row">
+  <div>
+    <h1>COURSE LIST</h1>
+  </div>
+  <div>
+    Sort By:
+    <button
+      [class.active]="sortBy === 'name'"
+      (click)="sortCourses('name')"
+      class="btn btn-default"
+    >
+      Name
+    </button>
+    <button
+      [class.active]="sortBy === 'id'"
+      (click)="sortCourses('id')"
+      class="btn btn-default"
+    >
+      ID
+    </button>
+  </div>
+  <div>
+    Filter By:
+    <button
+      [class.active]="filterBy === 'all'"
+      (click)="filterCourses('all')"
+      class="btn btn-default"
+    >
+      All
+    </button>
+    <button
+      [class.active]="filterBy === 'beginner'"
+      (click)="filterCourses('beginner')"
+      class="btn btn-default"
+    >
+      Beginner
+    </button>
+    <button
+      [class.active]="filterBy === 'intermediate'"
+      (click)="filterCourses('intermediate')"
+      class="btn btn-default"
+    >
+      Intermediate
+    </button>
+    <button
+      [class.active]="filterBy === 'advanced'"
+      (click)="filterCourses('advanced')"
+      class="btn btn-default"
+    >
+      Advanced
+    </button>
+    <button
+      [class.active]="filterBy === 'expert'"
+      (click)="filterCourses('expert')"
+      class="btn btn-default"
+    >
+      Expert
+    </button>
+  </div>
+</div>
+
 <div class="course-list row">
   <!-- <course-item [course1]="course1"></course-item> -->
   <course-item
     class="col-lg-6"
-    *ngFor="let course of courses"
+    *ngFor="let course of visibleCourses"
     [course1]="course"
     (courseName)="parentHandler($event)"
   >
   </course-item>
-  <div *ngFor="let i of [1, 2, 3, 4, 5]">
+  <div class="col-lg-12" *ngFor="let i of [1, 2, 3, 4, 5]">
     {{ i }}
     <div>content inside a div</div>
   </div>
